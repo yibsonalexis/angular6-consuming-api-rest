@@ -1,0 +1,44 @@
+<section class="section-container">
+  <mat-toolbar>
+    Agregar Categoria
+  </mat-toolbar>
+  <br>
+  <form class="form-container" [formGroup]="frmCategories">
+    <mat-form-field>
+      <input matInput placeholder="Nombre" formControlName="name">
+      <mat-error *ngIf="(frmCategories.get('name').touched || frmCategories.get('name').dirty) 
+      && frmCategories.get('name').errors">
+        <mat-error *ngIf="frmCategories.get('name').errors.required">
+          El campo nombre es requerido
+        </mat-error>
+        <mat-error *ngIf="frmCategories.get('name').errors.minlength">
+          Minímo 2 caracteres
+        </mat-error>
+        <mat-error *ngIf="frmCategories.get('name').errors.maxlength">
+          Maximo 10 caracteres
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Descripsión" formControlName="description">
+      <mat-error *ngIf="(frmCategories.get('description').touched || frmCategories.get('description').dirty) 
+    && frmCategories.get('description').errors">
+        <mat-error *ngIf="frmCategories.get('description').errors.required">
+          La descripción es requerida
+        </mat-error>
+        <mat-error *ngIf="frmCategories.get('description').errors.maxlength">
+          Maximo 100 caracteres
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+    <br>
+    <div fxLayout="row" fxLayoutAlign="end">
+      <button mat-raised-button color="primary" [routerLink]="['/categories']" routerLinkActive="router-link-active" >CANCELAR</button>
+      <span class="space-button"></span>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!frmCategories.valid" (click)="save();">AGREGAR</button>
+    </div>
+
+
+  </form>
+</section>

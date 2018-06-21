@@ -1,0 +1,19 @@
+
+.divConten{
+	width: 70%;
+	margin: 0 auto;
+	padding-top: 50px;
+	/* background-color: red; */
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.active{
+  /* font-size: 20px; */
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  /* font-weight: 900; */
+  background-color: #303a74;
+}
+
