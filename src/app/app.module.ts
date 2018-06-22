@@ -14,6 +14,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 import { HomeComponent } from './pages/home/home.component';
@@ -64,7 +65,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSortModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
   ],
   providers: [CategoriesService],
   bootstrap: [AppComponent]
